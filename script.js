@@ -209,7 +209,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     /* ——— Блок обратной связи: отправка на Google Apps Script Webhook ——— */
-    const FEEDBACK_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbzfeVXfFGFpWsboOYP_fuGbPiRTn5dNjM_K024rkLQ23jkWNxQoYDYpXV6-GUdVnwLV/exec";
+    const FEEDBACK_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbzGERhNbBjHhLyVQCuRZ2via-dthwUEYLYMyQAYXSGO05l-Hl4gJj_cFUK-Ro9Do-M/exec";
 
     const form = document.getElementById("feedback-form");
     const submitBtn = document.getElementById("feedback-submit");
