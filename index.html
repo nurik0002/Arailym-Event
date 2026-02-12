@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приглашение на праздник</title>
+    
+    <!-- Шрифты: Great Vibes (каллиграфия), Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="invitation">
+        <!-- Обёртка: картинка + кнопка музыки (кнопка позиционируется относительно неё и не обрезается) -->
+        <div class="image-block-wrap">
+            <div class="image-block">
+                <img 
+                    src="Pictures/Qyz.jpg" 
+                    alt="Праздничное торжество"
+                    class="invitation-image"
+                >
+                <!-- Скрытый аудиоплеер: музыка включается при загрузке, управление — кнопкой -->
+                <audio id="invitation-audio" loop preload="auto">
+                    <source src="music/Kazybek Kuraiysh - Баяғы.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <!-- Кнопка вкл/выкл музыки: слева под картинкой, наполовину заезжает на изображение -->
+            <button type="button" class="music-btn" id="music-btn" aria-label="Выключить музыку">
+                <span class="music-btn-icon music-btn-icon--pause" aria-hidden="true">
+                    <!-- Иконка паузы: две полосы с чёрной заливкой и скруглёнными углами -->
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="6" y="4" width="4" height="16" rx="2" ry="2" fill="#000"/>
+                        <rect x="14" y="4" width="4" height="16" rx="2" ry="2" fill="#000"/>
+                    </svg>
+                </span>
+                <span class="music-btn-icon music-btn-icon--play" aria-hidden="true" hidden>
+                    <!-- Иконка воспроизведения: треугольник с чёрной заливкой и гладкими углами -->
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 5v14l11-7L8 5z" fill="#000" stroke="#000" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+                    </svg>
+                </span>
+            </button>
+        </div>
+
+        <!-- Контент приглашения -->
+        <div class="content">
+            <h1 class="invitation-title">Arailym</h1>
+            <h2 class="invitation-subtitle">QYZ UZATU</h2>
+        </div>
+
+        <!-- Блок со стихотворениями -->
+        <section class="poems-block">
+            <h3 class="poem-line">Қимайды ұзатқан жақ қыз баласын,</h3>
+            <h3 class="poem-line">жүрегі қалай ғана сыздамасын.</h3>
+            <h3 class="poem-line">Құдалар, алақанға салып бердік,</h3>
+            <h3 class="poem-line break">жұлып алып жүректің бір парасын.</h3>
+            <h3 class="poem-line">Көңіл де, көз де тояр  да, күйеу бала,</h3>
+            <h3 class="poem-line">Болмассың үш жұртыңа сүйеу ғана.</h3>
+            <h3 class="poem-line">Жарыңның бақыты бол, жұлдызы бол,</h3>
+            <h3 class="poem-line">Осындай қыз бұл дүниеде біреу ғана.</h3>
+        </section>
+        <!-- Разделитель после стихотворений -->
+        <div class="block-divider" aria-hidden="true">
+            <img src="Pictures/ornament.png" alt="" class="block-divider-img">
+        </div>
+
+        <!-- Блок со словами приглашения -->
+        <section class="invitation-text">
+            <p>Құрметті ағайын-туыс,</p>
+            <p>бауырлар, құда-жекжат,</p>
+            <p>нағашы-жиен, бөлелер,</p>
+            <p>құрбы-құрдас, дос-жарандар,</p>
+            <p>әріптестер, көршілер!</p>
+            <p>Сіз(дер)ді аяулы қызымыз </p>
+            <p class="invitation-name">Арайлымның</p>
+            <p>ұзату тойына арналған</p>
+            <p>салтанатты ақ</p>
+            <p>Дастарханымыздың қадірлі</p>
+            <p>Қонағы болуға шақырамыз!</p>
+        </section>
+        <!-- Разделитель после текста приглашения -->
+        <div class="block-divider" aria-hidden="true">
+            <img src="Pictures/ornament.png" alt="" class="block-divider-img">
+        </div>
+
+        <!-- Блок с датой и временем мероприятия -->
+        <section class="event-datetime">
+            <h1 class="event-datetime-title">Той салтанатты</h1>
+            <h3 class="event-date">21 Маусым 2026</h3>
+            <div class="event-calendar-placeholder">
+                <img src="Pictures/calendar.png" alt="Календарь" class="event-calendar-image">
+            </div>
+            <h3 class="event-time">Басталуы 13 : 00</h3>
+            <h3 class="event-time">Той иелері:</h3>
+            <h3 class="event-organizers">Жәлел - Нұргүл</h3>
+        </section>
+        <!-- Разделитель после даты и времени -->
+        <div class="block-divider" aria-hidden="true">
+            <img src="Pictures/ornament.png" alt="" class="block-divider-img">
+        </div>
+
+        <!-- Блок с местом проведения мероприятия -->
+        <section class="event-venue">
+            <h1 class="venue-title">Мекен-жайымыз</h1>
+            <h3 class="venue-address">Қарғанды қаласы, Проспект Шахтёров 35/1,</h3>
+            <h3 class="venue-address">"Dastur Hall" мейрамханасы.</h3>
+            <a href="https://go.2gis.com/QNLaz" target="_blank" rel="noopener noreferrer" class="venue-2gis-btn" aria-label="Открыть в 2ГИС">
+                <img src="Pictures/orig.png" alt="2ГИС" class="venue-2gis-icon">
+            </a>
+            <h3 class="venue-welcome">Қуанышымызға ортақ болыңыздар!</h3>
+        </section>
+        <!-- Разделитель после блока места проведения -->
+        <div class="block-divider" aria-hidden="true">
+            <img src="Pictures/ornament.png" alt="" class="block-divider-img">
+        </div>
+
+        <!-- Блок обратного отсчёта -->
+        <section class="countdown-block">
+            <div class="countdown-image-wrap">
+                <img src="Pictures/Uy.jpg" alt="Той салтанаты" class="countdown-image">
+                <div class="countdown-overlay">
+                    <h3 class="countdown-title">ТОЙ САЛТАНАТЫНА ДЕЙІН:</h3>
+                    <div class="countdown-timer">
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="countdown-days">0</span>
+                            <span class="countdown-label">күн</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="countdown-hours">0</span>
+                            <span class="countdown-label">сағат</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="countdown-minutes">0</span>
+                            <span class="countdown-label">минут</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="countdown-seconds">0</span>
+                            <span class="countdown-label">секунд</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок обратной связи: подтверждение прихода на той (в самом низу страницы) -->
+        <section class="feedback-block" id="feedback-section">
+            <h2 class="feedback-title">Тойға келуіңізді растауыңызды сұраймыз</h2>
+            <h3 class="feedback-label">Аты-жөніңізді жазыңыз (жұбыңызбен келетін болсаңыз, есімдеріңізді бірге жазуды өтінеміз)</h3>
+            <form class="feedback-form" id="feedback-form" novalidate>
+                <input
+                    type="text"
+                    name="guest-name"
+                    id="guest-name"
+                    class="feedback-input"
+                    placeholder="Аты-жөніңіз"
+                    autocomplete="name"
+                    required
+                >
+                <h2 class="feedback-question">Тойға келесізбе?</h2>
+                <div class="feedback-radios">
+                    <label class="feedback-radio-label">
+                        <input type="radio" name="attendance" value="Келемін" class="feedback-radio" required>
+                        <h3 class="feedback-radio-text">Келемін</h3>
+                    </label>
+                    <label class="feedback-radio-label">
+                        <input type="radio" name="attendance" value="Өкінішке орай келе алмаймын" class="feedback-radio">
+                        <h3 class="feedback-radio-text">Өкінішке орай келе алмаймын</h3>
+                    </label>
+                </div>
+                <button type="submit" class="feedback-submit-btn" id="feedback-submit">
+                    <h3 class="feedback-submit-text">Жіберу</h3>
+                </button>
+            </form>
+            <p class="feedback-message" id="feedback-message" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
