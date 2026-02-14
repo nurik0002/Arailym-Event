@@ -3,13 +3,12 @@
    Стили: минимализм, центрирование, адаптивность
    ============================================ */
 
-/* Шрифт KZGoodVibes: optional — при медленной связи не подменяем шрифт позже, избегаем «прыжка» */
+/* Шрифт KZGoodVibes */
 @font-face {
     font-family: "KZGoodVibes";
     src: url("fonts/KZGoodVibes.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
-    font-display: optional;
 }
 
 @font-face {
@@ -17,7 +16,6 @@
     src: url("fonts/Atziluth-Script_1.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
-    font-display: optional;
 }
 
 /* Сброс отступов и базовые настройки */

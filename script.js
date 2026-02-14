@@ -48,7 +48,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         var didStartOnce = false;
-
         function onFirstInteraction() {
             if (didStartOnce) return;
             didStartOnce = true;
@@ -56,24 +55,25 @@ document.addEventListener("DOMContentLoaded", function () {
             document.removeEventListener("click", onFirstInteraction);
             document.removeEventListener("touchstart", onFirstInteraction);
             document.removeEventListener("touchend", onFirstInteraction);
-            window.removeEventListener("scroll", onFirstScroll);
         }
 
         function onFirstScroll() {
             if (didStartOnce) return;
             didStartOnce = true;
-            startPlay();
+            setTimeout(function () { startPlay(); }, 500);
             window.removeEventListener("scroll", onFirstScroll);
         }
 
-        // Пробуем автозапуск при загрузке; при блокировке на мобильном — при первом касании/скролле (без подсказки)
+        // Пробуем автозапуск при загрузке (как в вашем коде)
         audio.play().then(function () {
             setPlayingState(true);
         }).catch(function () {
             setPlayingState(false);
+            // При блокировке — включаем при первом клике/касании
             document.addEventListener("click", onFirstInteraction);
             document.addEventListener("touchstart", onFirstInteraction, { passive: true });
             document.addEventListener("touchend", onFirstInteraction, { passive: true });
+            // И при первом скролле (с задержкой), как в вашем работающем коде
             window.addEventListener("scroll", onFirstScroll, { once: true });
         });
 
