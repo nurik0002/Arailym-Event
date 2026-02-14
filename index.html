@@ -15,7 +15,10 @@
 <body>
     <main class="invitation">
         <!-- Обёртка: картинка + кнопка музыки (кнопка позиционируется относительно неё и не обрезается) -->
-        <div class="image-block-wrap">
+        <div class="image-block-wrap block-with-ornament">
+            <div class="block-ornament block-ornament--left" aria-hidden="true">
+                <img src="Pictures/orn2.png" alt="" class="block-ornament-img" width="80" height="80" fetchpriority="low">
+            </div>
             <div class="image-block">
                 <img 
                     src="Pictures/Qyz.jpg" 
@@ -46,13 +49,19 @@
         </div>
 
         <!-- Контент приглашения -->
-        <div class="content">
+        <div class="content block-with-ornament">
+            <div class="block-ornament block-ornament--right" aria-hidden="true">
+                <img src="Pictures/orn2.png" alt="" class="block-ornament-img" width="80" height="80" fetchpriority="low">
+            </div>
             <h1 class="invitation-title">Arailym</h1>
             <h2 class="invitation-subtitle">QYZ UZATU</h2>
         </div>
 
         <!-- Блок со стихотворениями -->
-        <section class="poems-block">
+        <section class="poems-block block-with-ornament">
+            <div class="block-ornament block-ornament--left" aria-hidden="true">
+                <img src="Pictures/orn2.png" alt="" class="block-ornament-img" width="80" height="80" fetchpriority="low">
+            </div>
             <h3 class="poem-line">Қимайды ұзатқан жақ қыз баласын,</h3>
             <h3 class="poem-line">жүрегі қалай ғана сыздамасын.</h3>
             <h3 class="poem-line">Құдалар, алақанға салып бердік,</h3>
@@ -68,7 +77,10 @@
         </div>
 
         <!-- Блок со словами приглашения -->
-        <section class="invitation-text">
+        <section class="invitation-text block-with-ornament">
+            <div class="block-ornament block-ornament--right" aria-hidden="true">
+                <img src="Pictures/orn2.png" alt="" class="block-ornament-img" width="80" height="80" fetchpriority="low">
+            </div>
             <p>Құрметті ағайын-туыс,</p>
             <p>бауырлар, құда-жекжат,</p>
             <p>нағашы-жиен, бөлелер,</p>
@@ -87,7 +99,7 @@
         </div>
 
         <!-- Блок с датой и временем мероприятия -->
-        <section class="event-datetime">
+        <section class="event-datetime block-with-ornament">
             <h1 class="event-datetime-title">Той салтанатты</h1>
             <h3 class="event-date">21 Маусым 2026</h3>
             <div class="event-calendar-placeholder">
@@ -103,7 +115,10 @@
         </div>
 
         <!-- Блок с местом проведения мероприятия -->
-        <section class="event-venue">
+        <section class="event-venue block-with-ornament">
+            <div class="block-ornament block-ornament--right" aria-hidden="true">
+                <img src="Pictures/orn2.png" alt="" class="block-ornament-img" width="80" height="80" fetchpriority="low">
+            </div>
             <h1 class="venue-title">Мекен-жайымыз</h1>
             <h3 class="venue-address">Қарғанды қаласы, Проспект Шахтёров 35/1,</h3>
             <h3 class="venue-address">"Dastur Hall" мейрамханасы.</h3>
@@ -118,7 +133,7 @@
         </div>
 
         <!-- Блок обратного отсчёта -->
-        <section class="countdown-block">
+        <section class="countdown-block block-with-ornament">
             <div class="countdown-image-wrap">
                 <img src="Pictures/Uy.jpg" alt="Той салтанаты" class="countdown-image">
                 <div class="countdown-overlay">
@@ -146,7 +161,7 @@
         </section>
 
         <!-- Блок обратной связи: подтверждение прихода на той (в самом низу страницы) -->
-        <section class="feedback-block" id="feedback-section">
+        <section class="feedback-block block-with-ornament" id="feedback-section">
             <h2 class="feedback-title">Тойға келуіңізді растауыңызды сұраймыз</h2>
             <h3 class="feedback-label">Аты-жөніңізді жазыңыз (жұбыңызбен келетін болсаңыз, есімдеріңізді бірге жазуды өтінеміз)</h3>
             <form class="feedback-form" id="feedback-form" novalidate>
